@@ -1,4 +1,4 @@
-package com.ayeshaazeema.moviecatalogue.model
+package com.ayeshaazeema.moviecatalogue.model.movie
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

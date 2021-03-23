@@ -6,4 +6,6 @@
     <string name="movie">Movie</string>
     <string name="tv_show">TV Show</string>
     <string name="popular">Popular</string>
+    <string name="imageview">ImageView</string>
+    <string name="title">Title</string>
 </resources>

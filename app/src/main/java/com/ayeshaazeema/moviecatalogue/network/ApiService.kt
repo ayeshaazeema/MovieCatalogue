@@ -1,7 +1,7 @@
 package com.ayeshaazeema.moviecatalogue.network
 
-import com.ayeshaazeema.moviecatalogue.model.PopularResponse
-import com.ayeshaazeema.moviecatalogue.model.UpcomingResponse
+import com.ayeshaazeema.moviecatalogue.model.movie.PopularResponse
+import com.ayeshaazeema.moviecatalogue.model.movie.UpcomingResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
