@@ -7,5 +7,5 @@ data class TvPopularResponse(
     val page: Int,
 
     @SerializedName("results")
-    val result: ArrayList<TvPopularItemResponse>
+    val results: ArrayList<TvPopularItemResponse>
 )
