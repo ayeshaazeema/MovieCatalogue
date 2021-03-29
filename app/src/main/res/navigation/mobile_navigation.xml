@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_tv"
-        android:name="com.ayeshaazeema.moviecatalogue.ui.tv.TVFragment"
+        android:name="com.ayeshaazeema.moviecatalogue.ui.tv.TvFragment"
         android:label="@string/tv_show"
         tools:layout="@layout/fragment_tv" />
 

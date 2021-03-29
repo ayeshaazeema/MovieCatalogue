@@ -28,13 +28,13 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_popular"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_popular"
-            tools:listitem="@layout/item_movie">
+            tools:listitem="@layout/item_popular_movie">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Upcoming"
+            android:text="@string/upcoming"
             android:textSize="@dimen/_28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,8 +54,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_upcoming"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_100dp"
+            android:layout_height="@dimen/_500dp"
             android:layout_marginTop="16dp"
+            tools:listitem="@layout/item_upcoming_movie"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

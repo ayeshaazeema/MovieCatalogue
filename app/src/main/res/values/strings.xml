@@ -8,4 +8,7 @@
     <string name="popular">Popular</string>
     <string name="imageview">ImageView</string>
     <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="date">12-04-2021</string>
+    <string name="upcoming">Upcoming</string>
 </resources>

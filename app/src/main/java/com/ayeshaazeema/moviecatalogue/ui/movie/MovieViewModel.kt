@@ -5,9 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ayeshaazeema.moviecatalogue.BuildConfig
-import com.ayeshaazeema.moviecatalogue.model.movie.PopularResponse
-import com.ayeshaazeema.moviecatalogue.model.movie.ResultsItem
-import com.ayeshaazeema.moviecatalogue.model.movie.UpcomingResponse
+import com.ayeshaazeema.moviecatalogue.model.movie.*
 import com.ayeshaazeema.moviecatalogue.network.RetrofitConfig
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,7 +18,7 @@ class MovieViewModel : ViewModel() {
     }
 
     // Data
-    private val data = MutableLiveData<List<ResultsItem>>()
+    private val data = MutableLiveData<List<MoviePopularItemResponse>>()
 
     private fun getPopularMovie(page: Int) {
         RetrofitConfig().getApiService().getPopular(BuildConfig.API_KEY, page)
@@ -32,7 +30,7 @@ class MovieViewModel : ViewModel() {
                 ) {
                     if (response.isSuccessful) {
                         val responseMovie: PopularResponse? = response.body()
-                        data.postValue(responseMovie?.results!! as List<ResultsItem>?)
+                        data.postValue(responseMovie?.result)
                     }
                 }
 
@@ -42,33 +40,41 @@ class MovieViewModel : ViewModel() {
             })
     }
 
-    // Get all attribute
-    fun getData(): LiveData<List<ResultsItem>> {
+    // Get all attribute for popular movie
+    fun getData(): LiveData<List<MoviePopularItemResponse>> {
         return data
     }
+
+    /*========== Upcoming Movie ==========*/
 
     // Call page
     fun initUp(page: Int) {
         getUpcoming(page)
     }
 
+    private val dataUpcoming = MutableLiveData<List<UpcomingResponse>>()
+
     private fun getUpcoming(page: Int) {
         RetrofitConfig().getApiService().getUpcoming(BuildConfig.API_KEY, page)
-            .enqueue(object : Callback<UpcomingResponse> {
+            .enqueue(object : Callback<MovieUpcomingItemResponse> {
 
                 override fun onResponse(
-                    call: Call<UpcomingResponse>,
-                    response: Response<UpcomingResponse>
+                    call: Call<MovieUpcomingItemResponse>,
+                    response: Response<MovieUpcomingItemResponse>
                 ) {
                     if (response.isSuccessful) {
-                        val responseUpcoming: UpcomingResponse? = response.body()
-                        data.postValue(responseUpcoming?.results as List<ResultsItem>?)
+                        val upcomingResponse: MovieUpcomingItemResponse? = response.body()
+                        dataUpcoming.postValue(upcomingResponse?.result)
                     }
                 }
 
-                override fun onFailure(call: Call<UpcomingResponse>, t: Throwable) {
+                override fun onFailure(call: Call<MovieUpcomingItemResponse>, t: Throwable) {
                     Log.e("failure", t.toString())
                 }
             })
+    }
+
+    fun getDataUpcoming(): LiveData<List<UpcomingResponse>> {
+        return dataUpcoming
     }
 }

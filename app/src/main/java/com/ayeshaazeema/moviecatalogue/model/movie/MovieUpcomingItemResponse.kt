@@ -2,13 +2,9 @@ package com.ayeshaazeema.moviecatalogue.model.movie
 
 import com.google.gson.annotations.SerializedName
 
-data class PopularResponse(
+data class MovieUpcomingItemResponse(
     @SerializedName("page")
     val page: Int,
-
     @SerializedName("results")
-    val result: ArrayList<MoviePopularItemResponse>
+    val result: ArrayList<UpcomingResponse>
 )
-
-
-
