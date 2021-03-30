@@ -18,9 +18,9 @@ class UpcomingMovieAdapter(val listUpcoming: List<UpcomingResponse>) :
             with(itemView) {
                 Glide.with(context).load(BuildConfig.IMAGE_URL + upcomingMovies.poster_path)
                     .into(iv_upcoming)
-                tv_title_upcoming.text = upcomingMovies.title
-                tv_desc_upcoming.text = upcomingMovies.overview
-                tv_date_upcoming.text = upcomingMovies.release_date
+                tv_title_upcoming_movie.text = upcomingMovies.title
+                tv_overview_upcoming_movie.text = upcomingMovies.overview
+                tv_date_upcoming_movie.text = upcomingMovies.release_date
             }
         }
 

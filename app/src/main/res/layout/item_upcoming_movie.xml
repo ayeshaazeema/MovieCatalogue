@@ -15,8 +15,8 @@
         app:srcCompat="@drawable/ic_image" />
 
     <TextView
-        android:id="@+id/tv_title_upcoming"
-        android:layout_width="@dimen/_250dp"
+        android:id="@+id/tv_title_upcoming_movie"
+        android:layout_width="@dimen/_245dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginTop="@dimen/_5dp"
@@ -32,8 +32,8 @@
         app:layout_constraintTop_toTopOf="@+id/iv_upcoming" />
 
     <TextView
-        android:id="@+id/tv_desc_upcoming"
-        android:layout_width="@dimen/_250dp"
+        android:id="@+id/tv_overview_upcoming_movie"
+        android:layout_width="@dimen/_245dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
@@ -41,15 +41,15 @@
         android:ellipsize="end"
         android:maxLines="3"
         android:text="@string/description"
-        app:layout_constraintBottom_toTopOf="@+id/tv_date_upcoming"
+        app:layout_constraintBottom_toTopOf="@+id/tv_date_upcoming_movie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv_upcoming"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_upcoming"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_upcoming_movie"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tv_date_upcoming"
+        android:id="@+id/tv_date_upcoming_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

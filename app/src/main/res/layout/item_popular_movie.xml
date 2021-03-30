@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cv_movie"
+        android:id="@+id/cv_popular_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iv_movie_poster"
+            android:id="@+id/iv_poster_popular_movie"
             android:layout_width="@dimen/_100dp"
             android:layout_height="@dimen/_150dp"
             android:contentDescription="@string/imageview"
@@ -28,7 +28,7 @@
             app:srcCompat="@drawable/image_default" />
 
         <TextView
-            android:id="@+id/tv_movie_title"
+            android:id="@+id/tv_title_popular_movie"
             android:layout_width="@dimen/_100dp"
             android:layout_height="wrap_content"
             android:text="@string/title"
@@ -36,9 +36,9 @@
             android:textStyle="bold"
             android:maxLines="2"
             android:ellipsize="end"
-            app:layout_constraintEnd_toEndOf="@+id/iv_movie_poster"
-            app:layout_constraintStart_toStartOf="@+id/iv_movie_poster"
-            app:layout_constraintTop_toBottomOf="@+id/iv_movie_poster" />
+            app:layout_constraintEnd_toEndOf="@+id/iv_poster_popular_movie"
+            app:layout_constraintStart_toStartOf="@+id/iv_poster_popular_movie"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster_popular_movie" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

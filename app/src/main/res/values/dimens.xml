@@ -13,4 +13,7 @@
     <dimen name="_18sp">18sp</dimen>
     <dimen name="_500dp">500dp</dimen>
     <dimen name="_250dp">250dp</dimen>
+    <dimen name="_230dp">230dp</dimen>
+    <dimen name="_240dp">240dp</dimen>
+    <dimen name="_245dp">245dp</dimen>
 </resources>

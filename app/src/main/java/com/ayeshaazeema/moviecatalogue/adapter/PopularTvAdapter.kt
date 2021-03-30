@@ -17,9 +17,9 @@ class PopularTvAdapter(val listTvPopular: List<TvPopularItemResponse>) :
         fun bind(tvpopular: TvPopularItemResponse) {
             with(itemView) {
                 Glide.with(context).load(BuildConfig.IMAGE_URL + tvpopular.poster_path)
-                    .into(iv_popular_tv)
+                    .into(iv_poster_popular_tv)
                 tv_title_popular_tv.text = tvpopular.name
-                tv_language_popular_tv.text = tvpopular.original_language
+                tv_overview_popular_tv.text = tvpopular.overview
             }
         }
     }

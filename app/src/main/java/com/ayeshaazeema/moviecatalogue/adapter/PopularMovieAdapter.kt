@@ -18,8 +18,8 @@ class PopularMovieAdapter(var listMoviePopular: List<MoviePopularItemResponse>) 
             with(itemView)
             {
                 Glide.with(context).load(BuildConfig.IMAGE_URL + moviePopular.poster_path)
-                    .into(iv_movie_poster)
-                tv_movie_title.text = moviePopular.title
+                    .into(iv_poster_popular_movie)
+                tv_title_popular_movie.text = moviePopular.title
             }
         }
     }
