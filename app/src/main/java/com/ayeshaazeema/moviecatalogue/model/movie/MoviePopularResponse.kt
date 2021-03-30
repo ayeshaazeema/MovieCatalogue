@@ -2,7 +2,8 @@ package com.ayeshaazeema.moviecatalogue.model.movie
 
 import com.google.gson.annotations.SerializedName
 
-data class PopularResponse(
+data class MoviePopularResponse(
+
     @SerializedName("page")
     val page: Int,
 

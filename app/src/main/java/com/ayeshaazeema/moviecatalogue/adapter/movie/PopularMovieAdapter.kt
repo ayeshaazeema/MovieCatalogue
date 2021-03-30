@@ -1,4 +1,4 @@
-package com.ayeshaazeema.moviecatalogue.adapter
+package com.ayeshaazeema.moviecatalogue.adapter.movie
 
 import android.view.LayoutInflater
 import android.view.View

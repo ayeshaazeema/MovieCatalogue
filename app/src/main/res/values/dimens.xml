@@ -16,4 +16,6 @@
     <dimen name="_230dp">230dp</dimen>
     <dimen name="_240dp">240dp</dimen>
     <dimen name="_245dp">245dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
 </resources>

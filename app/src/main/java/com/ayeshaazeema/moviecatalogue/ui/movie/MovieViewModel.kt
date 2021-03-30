@@ -22,19 +22,19 @@ class MovieViewModel : ViewModel() {
 
     private fun getPopularMovie(page: Int) {
         RetrofitConfig().getApiService().getPopular(BuildConfig.API_KEY, page)
-            .enqueue(object : Callback<PopularResponse> {
+            .enqueue(object : Callback<MoviePopularResponse> {
 
                 override fun onResponse(
-                    call: Call<PopularResponse>,
-                    response: Response<PopularResponse>
+                    call: Call<MoviePopularResponse>,
+                    responseMovie: Response<MoviePopularResponse>
                 ) {
-                    if (response.isSuccessful) {
-                        val responseMovie: PopularResponse? = response.body()
-                        data.postValue(responseMovie?.result)
+                    if (responseMovie.isSuccessful) {
+                        val responseMovieMovie: MoviePopularResponse? = responseMovie.body()
+                        data.postValue(responseMovieMovie?.result)
                     }
                 }
 
-                override fun onFailure(call: Call<PopularResponse>, t: Throwable) {
+                override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
                     Log.e("failure", t.toString())
                 }
             })
@@ -52,7 +52,7 @@ class MovieViewModel : ViewModel() {
         getUpcoming(page)
     }
 
-    private val dataUpcoming = MutableLiveData<List<UpcomingResponse>>()
+    private val dataUpcoming = MutableLiveData<List<MovieUpcomingResponse>>()
 
     private fun getUpcoming(page: Int) {
         RetrofitConfig().getApiService().getUpcoming(BuildConfig.API_KEY, page)
@@ -74,7 +74,7 @@ class MovieViewModel : ViewModel() {
             })
     }
 
-    fun getDataUpcoming(): LiveData<List<UpcomingResponse>> {
+    fun getDataUpcoming(): LiveData<List<MovieUpcomingResponse>> {
         return dataUpcoming
     }
 }

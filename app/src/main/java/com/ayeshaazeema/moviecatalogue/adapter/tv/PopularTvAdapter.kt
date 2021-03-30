@@ -1,4 +1,4 @@
-package com.ayeshaazeema.moviecatalogue.adapter
+package com.ayeshaazeema.moviecatalogue.adapter.tv
 
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +20,7 @@ class PopularTvAdapter(val listTvPopular: List<TvPopularItemResponse>) :
                     .into(iv_poster_popular_tv)
                 tv_title_popular_tv.text = tvpopular.name
                 tv_overview_popular_tv.text = tvpopular.overview
+                tv_date_popular_tv.text = tvpopular.first_air_date
             }
         }
     }
@@ -27,13 +28,13 @@ class PopularTvAdapter(val listTvPopular: List<TvPopularItemResponse>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): PopularTvAdapter.TvPopularViewHolder {
+    ): TvPopularViewHolder {
         return TvPopularViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_popular_tv, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: PopularTvAdapter.TvPopularViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TvPopularViewHolder, position: Int) {
         holder.bind(listTvPopular.get(position))
     }
 

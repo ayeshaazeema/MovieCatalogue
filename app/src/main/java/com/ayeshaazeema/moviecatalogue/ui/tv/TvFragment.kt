@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ayeshaazeema.moviecatalogue.R
-import com.ayeshaazeema.moviecatalogue.adapter.PopularTvAdapter
+import com.ayeshaazeema.moviecatalogue.adapter.tv.PopularTvAdapter
 import com.ayeshaazeema.moviecatalogue.model.tv.TvPopularItemResponse
 import kotlinx.android.synthetic.main.fragment_tv.*
 
@@ -37,7 +37,10 @@ class TvFragment : Fragment() {
     private fun getInitTvPopular(tvPopular: List<TvPopularItemResponse>) {
         rv_popular_tv.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, true)
-            popularTvAdapter = PopularTvAdapter(tvPopular)
+            popularTvAdapter =
+                PopularTvAdapter(
+                    tvPopular
+                )
             rv_popular_tv.adapter = popularTvAdapter
         }
 

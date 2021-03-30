@@ -16,5 +16,8 @@ data class TvPopularItemResponse(
     val original_language: String,
 
     @SerializedName("overview")
-    val overview: String
+    val overview: String,
+
+    @SerializedName("first_air_date")
+    val first_air_date: String
 )
