@@ -28,12 +28,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-        <ImageView
-            android:id="@+id/iv_poster_popular_movie"
-            android:layout_width="@dimen/_100dp"
-            android:layout_height="@dimen/_150dp"
-            android:contentDescription="@string/imageview"
-            app:srcCompat="@drawable/image_default" />
+            <ImageView
+                android:id="@+id/iv_poster_popular_movie"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_150dp"
+                android:contentDescription="@string/imageview"
+                app:srcCompat="@drawable/image_default" />
 
         </androidx.cardview.widget.CardView>
 

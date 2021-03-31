@@ -36,18 +36,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_popular_movie"
-            tools:listitem="@layout/item_popular_movie">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            tools:listitem="@layout/item_popular_movie"/>
 
         <TextView
             android:id="@+id/tv_upcoming_movie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="24dp"
             android:text="@string/upcoming"
-            android:textSize="@dimen/_28sp"
             android:textColor="@color/main"
+            android:textSize="@dimen/_28sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
