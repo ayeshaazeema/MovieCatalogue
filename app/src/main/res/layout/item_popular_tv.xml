@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/_16dp"
@@ -16,10 +15,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:contentDescription="@string/imageview"
             android:id="@+id/iv_poster_popular_tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/imageview"
             app:srcCompat="@drawable/ic_image" />
 
     </androidx.cardview.widget.CardView>
@@ -47,8 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginTop="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_16dp"
         android:ellipsize="end"
-        android:maxLines="3"
+        android:maxLines="4"
         android:text="@string/overview"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,11 +60,11 @@
         android:id="@+id/tv_date_popular_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_5dp"
         android:text="@string/date"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_marginBottom="@dimen/_5dp"
-        android:layout_marginStart="@dimen/_16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

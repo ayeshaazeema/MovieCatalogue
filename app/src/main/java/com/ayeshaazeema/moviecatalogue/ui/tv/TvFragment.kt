@@ -14,7 +14,6 @@ import com.ayeshaazeema.moviecatalogue.adapter.tv.PopularTvAdapter
 import com.ayeshaazeema.moviecatalogue.adapter.tv.TopRatedTvAdapter
 import com.ayeshaazeema.moviecatalogue.model.tv.TvPopularItemResponse
 import com.ayeshaazeema.moviecatalogue.model.tv.TvTopRatedItemResponse
-import com.ayeshaazeema.moviecatalogue.ui.movie.MovieViewModel
 import kotlinx.android.synthetic.main.fragment_tv.*
 
 class TvFragment : Fragment() {

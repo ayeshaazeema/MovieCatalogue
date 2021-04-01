@@ -5,8 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ayeshaazeema.moviecatalogue.BuildConfig
-import com.ayeshaazeema.moviecatalogue.model.movie.MoviePopularItemResponse
-import com.ayeshaazeema.moviecatalogue.model.movie.MoviePopularResponse
 import com.ayeshaazeema.moviecatalogue.model.tv.TvPopularItemResponse
 import com.ayeshaazeema.moviecatalogue.model.tv.TvPopularResponse
 import com.ayeshaazeema.moviecatalogue.model.tv.TvTopRatedItemResponse
@@ -48,37 +46,37 @@ class TvViewModel : ViewModel() {
         return dataPopularTv
     }
 
-    // Top Rated TV
+     // Top Rated TV
 
-//    fun initTopRatedTv(page: Int) {
-//        getTopRatedTv(page)
-//    }
-//
-//    private val dataTopRatedTv = MutableLiveData<List<TvTopRatedItemResponse>>()
-//
-//    private fun getTopRatedTv(page: Int) {
-//        RetrofitConfig().getApiService().getTvTopRated(BuildConfig.API_KEY, page)
-//            .enqueue(object : Callback<TvTopRatedResponse> {
-//
-//                override fun onResponse(
-//                    call: Call<TvTopRatedResponse>,
-//                    response: Response<TvTopRatedResponse>
-//                ) {
-//                    if (response.isSuccessful) {
-//                        val responseTvTopRated: TvTopRatedResponse? = response.body()
-//                        dataTopRatedTv.postValue(responseTvTopRated?.results)
-//                    }
-//                }
-//
-//                override fun onFailure(call: Call<TvTopRatedResponse>, t: Throwable) {
-//                    Log.e("failure", t.toString())
-//                }
-//            })
-//    }
-//
-//    fun getTvTopRatedData(): LiveData<List<TvTopRatedItemResponse>> {
-//        return dataTopRatedTv
-//    }
+    fun initTopRatedTv(page: Int) {
+        getTopRatedTv(page)
+    }
+
+    private val dataTopRatedTv = MutableLiveData<List<TvTopRatedItemResponse>>()
+
+    private fun getTopRatedTv(page: Int) {
+        RetrofitConfig().getApiService().getTvTopRated(BuildConfig.API_KEY, page)
+            .enqueue(object : Callback<TvTopRatedResponse> {
+
+                override fun onResponse(
+                    call: Call<TvTopRatedResponse>,
+                    response: Response<TvTopRatedResponse>
+                ) {
+                    if (response.isSuccessful) {
+                        val responseTvTopRated: TvTopRatedResponse? = response.body()
+                        dataTopRatedTv.postValue(responseTvTopRated?.results)
+                    }
+                }
+
+                override fun onFailure(call: Call<TvTopRatedResponse>, t: Throwable) {
+                    Log.e("failure", t.toString())
+                }
+            })
+    }
+
+    fun getTvTopRatedData(): LiveData<List<TvTopRatedItemResponse>> {
+        return dataTopRatedTv
+    }
 }
 
 
